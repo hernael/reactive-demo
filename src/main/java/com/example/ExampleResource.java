@@ -21,4 +21,10 @@ public class ExampleResource {
     public Uni<PageResponse<Entity>> hello() {
         return repository.getPage();
     }
+
+    @GET
+    @Path("/first")
+    public Uni<Entity> getFirst() {
+        return repository.getFirst();
+    }
 }

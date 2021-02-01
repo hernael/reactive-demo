@@ -20,4 +20,7 @@ public class Repository implements PanacheRepository<Entity> {
                 .build()
         );
     }
+    public Uni<Entity> getFirst() {
+        return this.findAll().firstResult();
+    }
 }
